@@ -3,6 +3,63 @@ Author: Geoff Groenendale
 Author URI: https://ggroenendale.github.io/
  */
 
+ /* http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
+ */
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed,
+ figure, figcaption, footer, header, hgroup,
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+ 	margin: 0;
+ 	padding: 0;
+ 	border: 0;
+ 	font-size: 100%;
+ 	font: inherit;
+ 	vertical-align: baseline;
+ }
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure,
+ footer, header, hgroup, menu, nav, section {
+ 	display: block;
+ }
+ body {
+ 	line-height: 1;
+ }
+ ol, ul {
+ 	list-style: none;
+ }
+ blockquote, q {
+ 	quotes: none;
+ }
+ blockquote:before, blockquote:after,
+ q:before, q:after {
+ 	content: '';
+ 	content: none;
+ }
+ table {
+ 	border-collapse: collapse;
+ 	border-spacing: 0;
+ }
+
+/* Begin Font Families here */
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('../fonts/BEBAS.ttf') format('truetype');
+}
+
+/* Body Styling*/
+
 html {
 
 }
@@ -12,15 +69,236 @@ body {
 }
 
 #wrapper {
-
 }
 
+/* Topbar styling*/
+
+#topbar-wrap {
+    width: 100%;
+    height: 34px;
+    background-color: #ff6200;
+}
+
+#topbar {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 60%;
+    margin: auto;
+}
+
+#callus {
+    position: relative;
+    top: 50%;
+    font-family: 'Bebas', sans-serif;
+    font-size: 14.7px;
+    color: #be3600;
+}
+
+#phnumber{
+    padding-left: 8px;
+    color: #fff;
+}
+
+#logsign {
+    position: relative;
+    top: 50%;
+    margin-right: 0px;
+    margin-left: auto;
+    font-family: 'Bebas', sans-serif;
+    font-size: 14.7px;
+    color: #be3600;
+}
+
+#logsign p {
+    display: inline-block;
+}
+
+#logintext {
+    padding-right: 6px;
+}
+
+#signuptext {
+    padding-left: 6px;
+    color: #fff;
+}
+
+/* Header and Nav Styling*/
 header {
+    width: 60%;
+    margin: auto;
+    margin-top: calc(72px - 34px);
+    margin-bottom: 80px;
+}
+
+#yourlogo {
+    font-family: 'Bebas', sans-serif;
+    font-size: 41px;
+    clear: both;
+    display: inline-block;
+}
+
+#yourlogo-span {
+    color: #ff6200;
+}
+
+nav {
+    clear: both;
+    display: inline-block;
+    width: 70%;
+    float: right;
+    height: 98px;
+}
+nav ul {
+    width: calc(1249px - 839px);
+    display: grid;
+    margin-right: 0px;
+    margin-left: auto;
+    grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    font-family: Myriad Pro, sans-serif;
+    font-size: 13px;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Content Styling */
+#content {
+    width: 60%;
+    margin: auto;
+}
+
+.breadcrumb {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+#breadcrumb-cur {
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 27px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    color: #ff6200;
+    margin-bottom: 18px;
+}
+
+#contact-blurb {
+    margin-bottom: calc(373px - 315px);
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #878787;
+}
+
+h3 {
+    font-size: 27px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    color: #ff6200;
+    margin-bottom: 18px;
+}
+
+#twocols {
+    display: grid;
+    grid-template-columns: calc(790px - 320px) calc(867px - 790px) calc(1275px - 867px);
+}
+
+#contactus::after{
+    content: '';
+    display: block;
+    height: 8px;
+    background-color: rgba(61, 61, 61, 0.89);
+    width: calc(790px - 320px);
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+#contactus-block form {
+}
+
+.formitem{
+    height: 30px;
+    border: 1px solid #ededed;
+    background-color: #f6f6f6;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.formitem::placeholder {
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.formitem::value {
 
 }
 
-#content {
+#formname {
+    width: 100%;
+}
 
+#formphone {
+    width: calc(549px - 321px);
+}
+
+#formemail {
+    width: calc(789px - 561px);
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+#formmess {
+    width: 100%;
+    height: calc(621px - 512px);
+    vertical-align: top;
+}
+
+#formbutton {
+    margin-top: 22px;
+    width: calc(418px - 320px);
+    height: calc(680px - 643px);
+    background-color: #ff6200;
+    border: none;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+#reachus::after{
+    content: '';
+    display: block;
+    height: 8px;
+    background-color: rgba(61, 61, 61, 0.89);
+    width: calc(1275px - 867px);
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+#reachus-block h5{
+    font-size: 16px;
+    font-family: 'Myriad Pro', sans-serif;
+    color: #595959;
+}
+
+#reachus-block p{
+    font-size: 14px;
+    font-family: 'Myriad Pro', sans-serif;
+    color: #595959;
 }
 
 footer {
